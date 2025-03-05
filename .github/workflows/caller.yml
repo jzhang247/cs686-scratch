@@ -1,0 +1,14 @@
+name: Caller Workflow
+on:
+  workflow_dispatch:
+
+
+jobs:
+  call_another_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Callee Workflow
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: callee.yml
+          token: ${{ secrets.GITHUB_TOKEN }}
