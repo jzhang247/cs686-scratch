@@ -11,6 +11,6 @@ jobs:
         uses: peter-evans/workflow-dispatch@v1
         with:
           token: ${{ secrets.PAT_TOKEN }}
-          repository: ${{ github.repository }}  # Calls workflow in the same repo
+          repository: ${{ github.repository }}  
           workflow: callee.yml
-          ref: main  
+          ref: main
