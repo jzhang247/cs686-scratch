@@ -16,10 +16,10 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/jzhang247/cs686-scratch/actions/workflows/callee/dispatches" \
             -d '{"ref":"main"}'
-      - name: Trigger Callee Workflow
-        uses: peter-evans/workflow-dispatch@v1
-        with:
-          token: ${{ secrets.WORKFLOW_TOKEN }}
-          repository: ${{ github.repository }}
-          workflow: callee.yml
-          ref: main
+      # - name: Trigger Callee Workflow
+      #   uses: peter-evans/workflow-dispatch@v1
+      #   with:
+      #     token: ${{ secrets.WORKFLOW_TOKEN }}
+      #     repository: ${{ github.repository }}
+      #     workflow: callee.yml
+      #     ref: main
