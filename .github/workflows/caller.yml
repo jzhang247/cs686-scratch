@@ -5,7 +5,7 @@ on:
 jobs:
   call_another_workflow:
     runs-on: ubuntu-latest
-    environment: main
+    environment: deploy
     steps:
       - name: Trigger Target Workflow
         env:
