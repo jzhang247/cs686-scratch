@@ -1,11 +1,12 @@
 name: Caller Workflow
 on:
   workflow_dispatch:
-
+  
 
 jobs:
   call_another_workflow:
     runs-on: ubuntu-latest
+    environment: main
     steps:
       - name: Trigger Callee Workflow
         uses: benc-uk/workflow-dispatch@v1
