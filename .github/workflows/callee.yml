@@ -3,8 +3,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  run_something:
+  j1:
     runs-on: ubuntu-latest
     steps:
       - name: Print a Message
-        run: echo "Hello from the callee workflow!"
+        run: echo "j1!"
+  j2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a Message
+        run: echo "j2!"
+  jj:
+    runs-on: ubuntu-latest
+    needs: [j1, j2]
+    steps:
+      - name: Print a Message
+        run: echo "jj!"
