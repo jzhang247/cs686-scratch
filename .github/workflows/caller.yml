@@ -11,4 +11,4 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: callee.yml
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
